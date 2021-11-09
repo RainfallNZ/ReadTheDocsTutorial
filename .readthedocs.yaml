@@ -1,7 +1,11 @@
 version: 2
 
-python:
-  version: "3.8"
+build:
+  os: "ubuntu-20.04"
+  tools:
+    python: "3.8"
+  
+python:  
   # Install our python package before building the docs
   install:
     - method: pip
@@ -10,6 +14,6 @@ python:
 sphinx:
   fail_on_warning: false
   
-  formats:
-    - pdf
-    - epub
+formats:
+  - pdf
+  - epub
